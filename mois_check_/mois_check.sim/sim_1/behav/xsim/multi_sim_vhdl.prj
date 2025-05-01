@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../moisture_check.srcs/sources_1/new/lcd16x2.vhd" \
+"../../../../moisture_check.srcs/sim_1/new/multi_sim.vhd" \
+
+# Do not sort compile order
+nosort
