@@ -51,7 +51,7 @@ The system includes:
 |      |       | (ssd_top) |     | Threshold)|
 +------+       +-----------+     +-----------+
 
-
+```
 ## ⚙️ Functional Description
 
 ### 🔹 Data Acquisition
