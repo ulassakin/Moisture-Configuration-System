@@ -1,5 +1,10 @@
 # FPGA-Based Smart Plant Moisture Monitoring System 🌱💧
 
+## 🎥 Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/RiimP4g_YFQ/0.jpg)](https://www.youtube.com/watch?v=RiimP4g_YFQ)
+
+
 ## 📖 Project Overview
 This project implements a **smart soil moisture monitoring system** using a **Basys3 FPGA board** and an **Arduino Uno with a soil moisture sensor**.  
 The goal is to determine whether the plant needs water, based on real-time soil moisture data, and provide **interactive visualization and control** through FPGA peripherals.
