@@ -44,7 +44,7 @@ The system includes:
                    v
           +----------------+
           |    Basys3 FPGA |
-          | (top_module.vhd)|
+          |(top_module.vhd)|
           +--------+-------+
                    |
    -----------------------------------
