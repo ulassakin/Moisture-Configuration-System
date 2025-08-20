@@ -50,3 +50,37 @@ The system includes:
 |16x2  |       | Display   |     | (User Set |
 |      |       | (ssd_top) |     | Threshold)|
 +------+       +-----------+     +-----------+
+
+
+## ⚙️ Functional Description
+
+### 🔹 Data Acquisition
+- The **Arduino Uno** continuously reads values from the soil moisture sensor.  
+- These values are transmitted to the **Basys3 FPGA** for further processing.  
+- The FPGA treats this input as the **actual soil moisture percentage** of the plant.  
+
+---
+
+### 🔹 Decision Logic
+- The central controller (`top_module.vhd`) compares the **actual soil moisture** with the **desired threshold**.  
+- The desired threshold can be set dynamically using the **Basys3 onboard switches**.  
+- Based on this comparison, the FPGA generates a decision output:  
+  - ✅ **Enough Water** → when actual moisture ≥ desired value  
+  - ⚠️ **Needs Water** → when actual moisture < desired value  
+
+---
+
+### 🔹 LCD Display (`lcd16x2.vhd`)
+- **Line 1** → Displays the **current soil moisture percentage** measured by the sensor.  
+- **Line 2** → Displays the irrigation status, such as:  
+  - `"NEEDS WATER"`  
+  - `"ENOUGH WATER"`  
+
+This provides the user with **real-time soil condition feedback** directly on the LCD screen.  
+
+---
+
+### 🔹 7-Segment Display (`ssd_top.vhd` + `ssd_sub.vhd`)
+- The **desired moisture threshold** set by the user is shown on the Basys3’s **4-digit 7-segment display**.  
+- Example: If the switches are configured to represent 60%, the 7-seg display shows:  
+
