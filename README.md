@@ -82,5 +82,15 @@ This provides the user with **real-time soil condition feedback** directly on th
 
 ### 🔹 7-Segment Display (`ssd_top.vhd` + `ssd_sub.vhd`)
 - The **desired moisture threshold** set by the user is shown on the Basys3’s **4-digit 7-segment display**.  
-- Example: If the switches are configured to represent 60%, the 7-seg display shows:  
+- Example: If the switches are configured to represent 60% as binary input, the 7-seg display shows:  60
+
+
+This ensures the user always knows the target value against which the FPGA is making decisions.  
+
+---
+
+### 🔹 Switches (User Input)
+- The Basys3’s onboard **16 switches** are used to set the **desired moisture threshold** in **percentage (0–99%)**.  
+- This provides **real-time calibration** capability: different plants or soil types may require different thresholds, and the user can adjust this instantly without modifying the code.  
+
 
