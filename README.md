@@ -60,7 +60,8 @@ The system includes:
 ## ⚙️ Functional Description
 
 ### 🔹 Data Acquisition
-- The **Arduino Uno** continuously reads values from the soil moisture sensor.  
+- The **Arduino Uno** continuously reads values from the soil moisture sensor.
+- This analog sensor data is converted to digital data inside the Arduino with **Arduino_ADC.ino** file. 
 - These values are transmitted to the **Basys3 FPGA** for further processing.  
 - The FPGA treats this input as the **actual soil moisture percentage** of the plant.  
 
